@@ -354,8 +354,9 @@ with col2:
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #666; padding: 2rem 0;">
-    <p>🛡️ SDN Traffic Classifier v2.0 | Powered by XGBoost & Streamlit</p>
+    <p>🛡️ SDN Traffic Classifier | Powered by XGBoost & Streamlit</p>
     <p><small>Protecting your network with advanced machine learning</small></p>
 </div>
 """, unsafe_allow_html=True)
+
 
