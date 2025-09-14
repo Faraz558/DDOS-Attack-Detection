@@ -182,31 +182,6 @@ with col1:
                             help=f"Enter value for {col}"
                         )
     
-    elif input_method == "Example Presets":
-        st.markdown("### 🎯 Example Scenarios")
-        
-        preset_option = st.selectbox(
-            "Choose a preset scenario:",
-            ["Normal Traffic", "Suspicious Activity", "High Volume Traffic", "Custom"]
-        )
-        
-        # Define preset values (you can customize these based on your features)
-        presets = {
-            "Normal Traffic": {col: np.random.normal(0.5, 0.1) for col in columns},
-            "Suspicious Activity": {col: np.random.normal(0.8, 0.2) for col in columns},
-            "High Volume Traffic": {col: np.random.normal(0.9, 0.15) for col in columns},
-        }
-        
-        if preset_option != "Custom":
-            inputs = presets[preset_option]
-            st.success(f"✅ Loaded {preset_option} preset values")
-        else:
-            inputs = {col: 0.0 for col in columns}
-        
-        # Allow users to modify preset values
-        with st.expander("🔧 Modify Values"):
-            for col in columns[:10]:  # Show first 10 for space
-                inputs[col] = st.number_input(f"{col}", value=inputs[col], key=f"preset_{col}")
     
     elif input_method == "Batch Upload":
         st.markdown("### 📁 Batch Processing")
