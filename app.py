@@ -142,7 +142,7 @@ st.sidebar.info(f"""
 # Input method selection
 input_method = st.sidebar.radio(
     "🔧 Input Method",
-    ["Manual Entry", "Example Presets", "Batch Upload"]
+    ["Manual Entry", "Batch Upload"]
 )
 
 # -----------------------
@@ -358,3 +358,4 @@ st.markdown("""
     <p><small>Protecting your network with advanced machine learning</small></p>
 </div>
 """, unsafe_allow_html=True)
+
